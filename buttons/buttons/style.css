@@ -1,0 +1,262 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #38040e;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    flex-direction: column;
+}
+
+/* first button */ 
+
+a.one {
+    margin: 15px 0px;
+    text-decoration: none;
+    color: antiquewhite;
+    border: 2px solid antiquewhite;
+    padding: 2rem 5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s;
+    font-size: 25px;
+}
+
+a.one:before{
+    content: "download";
+    font-weight: bold;
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    color: #38040e;
+    background: antiquewhite;
+    transform: translateY(-100%);
+    transition: all 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a.one:hover::before{
+    transform: translateY(0);
+}
+
+/* second button */
+
+a.two{
+    text-decoration: none;
+    color: antiquewhite;
+    background-color: #640518;
+    font-size: 1.5rem;
+    padding: 2rem 5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+    margin: 25px;
+}
+
+a.two::before{
+    content: "download";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #b81919;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(90deg);
+    transform-origin: left;
+    transition: all 0.5s;
+}
+
+a.two::after{
+    content: "download";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(135, 111, 78);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(90deg);
+    transform-origin: left;
+    transition: all 0.5s;
+    transition-delay: 0.65s;
+}
+
+a.two:hover:before,
+a.two:hover:after{
+    transform: rotateY(0);
+}
+
+/* third button */
+
+a.three{
+    margin: 25px;
+    padding: 1.5rem 4rem;
+    width: 280px;
+    height: 60px;
+    text-decoration: none;
+    background: transparent;
+    text-align: center;
+    line-height: 8px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: relative;
+    transition: all 0.2s;
+    color: antiquewhite;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+}
+
+a.three::before{
+    content: "";
+    position: absolute;
+    top: -3;  
+    left: -3;  
+    width: calc(100% + 3px); 
+    height: calc(100% + 3px);
+    background: #e5fc7f;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    transition: all 0.2s;
+    transform-origin: top;
+    
+}
+
+a.three::after{
+    content: "";
+    position: absolute;
+    top: 3;  
+    left: 3;  
+    width: calc(100% + 3px); 
+    height: calc(100% + 3px);
+    background: #7fb9f3;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    transition: all 0.2s;
+    transform-origin: bottom;
+   
+}
+
+a.three:hover:before {
+    top: -6px;
+    left: 0;
+    transform: perspective(1000px) rotateX(75deg);
+}
+
+a.three:hover:after {
+    top: 6px;
+    left: 0;
+    transform: perspective(1000px) rotateX(-75deg);
+}
+
+/* fourth button */
+
+a.four{
+    margin: 30px;
+    text-decoration: none;
+    color: antiquewhite;
+    padding: 1rem 4rem;
+    background: #640518;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+a.four::before{
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: -10px;
+    left: -10px;
+    /* background: #e5fc7f; */
+    border-top: 2px solid #e5fc7f;
+    border-left: 2px solid #e5fc7f;
+    transition: all 0.5s;
+}
+
+a.four:hover:before {
+    height: 100%;
+    width: 100%;
+}
+
+a.four::after{
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    bottom: -10px;
+    right: -10px;
+    border-bottom: 2px solid #e5fc7f;
+    border-right: 2px solid #e5fc7f;
+    transition: all 0.5s;
+}
+
+a.four:hover:after {
+    height: 100%;
+    width: 100%;
+}
+
+/* fifth button */
+
+a.five{
+    position: relative;
+    text-decoration: none;
+    color: rgb(33, 21, 5);
+    padding: 1rem 4rem;
+    border-radius: 100px;
+    background: #e5fc7f;
+    font-size: 1.5rem;
+    transition: all 0.2s;
+    margin: 28px;
+    font-weight: 600;
+}
+
+a.five::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #e5fc7f;
+    border-radius: 100px;
+    transition: all 1s;
+    z-index: -1;
+}
+
+a.five:hover:before {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+a.five:hover {
+    transform: translateX(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+a.five:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
