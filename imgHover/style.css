@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #7a8584;
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    gap: 0 40px;
+}
+
+
+.x{
+    width: 25rem;
+    height: 28rem;
+    position: relative;
+    overflow: hidden;
+}
+
+img{
+    margin: 0;
+    padding: 0 ;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s;
+}
+
+/* first img */
+
+.one{
+    box-shadow: 0 30px 40px black;
+    border-radius: 10px;
+}
+
+.first{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+    background: #283d3b;
+    transform: translateX(-100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+}
+
+.one:hover .first{
+    transform: translateX(0);
+}
+
+.one:hover img{
+    transform: translateX(100%);
+}
+
+/* second img */
+
+.two{
+    box-shadow: 0 30px 40px black;
+    border-radius: 10px;
+}
+
+.second {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    transition: all 1s;
+    transform: translateY(100%);
+    background: rgba(40, 61, 59, 0.7);
+}
+
+.two:hover .second{
+    transform: translateY(0%);
+}
+
+.two:hover img{
+    transform: translateY(-25%);
+}
+
+/* third img */
+
+.three{
+    box-shadow: 0 30px 40px black;
+    border-radius: 10px;
+
+}
+
+.third {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: aliceblue;
+    background: #1c305f;
+    transition: all 1s;
+}
+
+.third h3{
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 25px;
+    color: aliceblue;
+    opacity: 0;
+    transition: 0.1s;
+}
+
+.third p {
+    width: 80%;
+    margin: 10px auto;
+    font-size: 18px;
+    transition: 0.5s;
+    opacity: 0;
+    line-height: 25px;
+}
+
+.third a{
+    text-decoration: none;
+    background: #dbf1ef;
+    color: #283d3b;
+    padding: 10px 15px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: 1s;
+    opacity: 0;
+    line-height: 25px;
+}
+
+.three:hover .third {
+    height: 100%;
+    width: 100%;
+    left: 0;
+}
+
+.three:hover h3,
+.three:hover p,
+.three:hover a{
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+.three:hover img{
+    opacity: 0;
+}
