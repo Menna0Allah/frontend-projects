@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #262852;
+    height: 100vh;
+}
+
+#acc{
+    width: 600px;
+    margin: 100px auto;
+    padding: 55px;
+}
+
+li {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 15px;
+    background: whitesmoke;
+    box-shadow: -9px 9px 40px 5px rgba(0, 0, 0, 0.24);
+    padding: 10px;
+}
+
+li label {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+li span{
+    transform: rotate(90deg);
+    font-size: 22px;
+}
+
+input {
+    display: none;
+}
+
+.content {
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+#acc input[type = "radio"]:checked + .content {
+    max-height: 400px;
+}
