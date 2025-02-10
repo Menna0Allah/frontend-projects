@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #9d0208;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #03071e;
+}
+
+/* gray */
+.g-heart{
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.g-heart::before,
+.g-heart::after{
+    content: "";
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background-color: #ccc;
+}
+
+.g-heart::before{
+    top: -50px;
+    left: 0;
+}
+.g-heart::after{
+    left: 50px;
+    top: 0;
+}
+
+.r-heart {
+    background: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    transform: rotate(-45deg);
+    visibility: hidden;
+}
+
+.r-heart::before,
+.r-heart::after{
+    content: "";
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background-color: var(--main-color);
+}
+
+.r-heart::before{
+    top: -50px;
+    left: 0;
+}
+.r-heart::after{
+    left: 50px;
+    top: 0;
+}
+
+/* animation */
+
+.r-heart.animation {
+    animation: pop 0.9s linear;
+    visibility: visible;
+}
+
+.r-heart.fill-color {
+    background: var(--main-color);
+}
+
+@keyframes pop {
+    100% {
+        transform: scale(1.7) rotate(-45deg);
+        opacity: 0;
+    }
+}
