@@ -1,3 +1,28 @@
+const gt = document.querySelector('.g-t');
+const words = ["loyal", "kind", "funny", "smart", "caring", "brave"];
+let index = 0;
+
+async function typeEffect() {
+    while (true) {
+        const word = words[index];
+        for (let i = 0; i <= word.length; i++) {
+            gt.textContent = word.substring(0, i);
+            await new Promise(resolve => setTimeout(resolve, 150));
+        }
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        for (let i = word.length; i >= 0; i--) {
+            gt.textContent = word.substring(0, i);
+            await new Promise(resolve => setTimeout(resolve, 100));
+        }
+        await new Promise(resolve => setTimeout(resolve, 500));
+        index = (index + 1) % words.length;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', typeEffect);
+
+
+/*
 let gt = document.querySelector('.g-t');
 let cursor = document.querySelector('.cursor');
 
@@ -41,3 +66,4 @@ document.addEventListener('DOMContentLoaded', ()=>{
         setTimeout(type,newLetterDelay);
     }
 })
+*/
