@@ -96,3 +96,31 @@ body{
         opacity: 0;
     }
 }
+
+/* text */
+
+.h-t {
+    position: absolute;
+    color: #ccc;
+    font-size: 30px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    transform: rotate(45deg);
+    left: 40px;
+    bottom: 60px;
+    z-index: 99;
+    font-family: 'Lucida Sans';
+}
+
+.h-t{
+    animation: pop 0.9s linear;
+    opacity: 1;
+}
+
+@keyframes pop-text {
+    100% {
+        transform: scale(1.7) rotate(-45deg);
+        opacity: 0;
+    }
+}
