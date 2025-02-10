@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+}
+
+body{
+    background: #031926;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    color: aliceblue;
+}
+
+button{
+    border: 2px solid aliceblue;
+    background: transparent;
+    padding: 15px 35px;
+    margin-bottom: 15px;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+button:hover{
+    background: aliceblue;
+    color: #031926;
+}
+
+button:active{
+    padding: 8px 25px;
+}
