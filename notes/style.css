@@ -45,3 +45,24 @@
     width: 25px;
     margin-right: 8px;
 }
+
+.input-box{
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    min-height: 150px;
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    outline: none;
+    border-radius: 5px;
+    color: #333;
+}
+
+.input-box span{
+    position: absolute;
+    right: 18px;
+    bottom: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
