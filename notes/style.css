@@ -59,7 +59,7 @@
     color: #333;
 }
 
-.input-box span{
+.input-box div{
     position: absolute;
     right: 18px;
     bottom: 10px;
